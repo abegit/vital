@@ -1,0 +1,160 @@
+$smallbreak : 480px;
+$mediumbreak : 768px;
+$largebreak : 1024px;
+$xlargebreak : 1280px;
+
+
+@mixin bp-xlarge {
+  @media only screen and (min-width: $xlargebreak + 1) {@content;}
+}
+
+@mixin bp-large {
+  @media only screen and (min-width: $largebreak + 1) {@content;}
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: $largebreak) {@content;}
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: $mediumbreak + 1) {@content;}
+}
+
+
+@include bp-small {
+  .hide-small {display: none;}
+}
+@include bp-medium {
+  .hide-medium {display: none;}
+}
+@include bp-large {
+  .hide-large {display: none;}
+}
+@include bp-xlarge {
+  .hide-xlarge {display: none;}
+}
+
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+@mixin border-radius($rad1, $rad2:false, $rad3:false, $rad4:false) {
+ $params: $rad1;
+  @if $rad2 
+    { $params: $rad1, $rad2; }
+    @if $rad3 != false
+      { $params: $rad1, $rad2, $rad3; }
+      @if $rad4 != false
+        { $params: $rad1, $rad2, $rad3, $rad4; }
+        
+  -webkit-border-radius: $params;
+  border-radius: $params;
+}
+
+
+
+
+
+
+@mixin radial-bg($one, $two) {
+  background:$one; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: -moz-radial-gradient(center, ellipse cover, $one 0%, $two 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$one), color-stop(100%,$two)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, $one 0%,$two 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, $one 0%,$two 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, $one 0%,$two 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, $one 0%,$two 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$one', endColorstr='$two',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+@mixin vertical-bg($one, $two) {
+  background:$one; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: -moz-linear-gradient(center, linear cover, $one 0%, $two 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, white 50%, yellow, red); /* Chrome,Safari4+ */
+  background: -o-linear-gradient(center, linear cover, $one 0%,$two 100%); /* Opera 12+ */
+  background: -ms-linear-gradient(center, linear cover, $one 0%,$two 100%); /* IE10+ */
+  background: linear-gradient(linear at center, $one 0%,$two 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$one', endColorstr='$two',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+@mixin linear-gradient($one,$two) {
+  background: linear-gradient($one,$two);
+  background: -webkit-linear-gradient($one,$two);
+  background: -moz-linear-gradient($one,$two);  
+  background: -o-linear-gradient($one,$two);  
+}
+
+
+
+
+@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false, $shadow6:false, $shadow7:false, $shadow8:false) {
+ $params: $shadow1;
+  @if $shadow2 
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+           @if $shadow6 != false
+                { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6; }
+                @if $shadow7 != false
+                  { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7; }
+                  @if $shadow8 != false
+                    { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5, $shadow6, $shadow7, $shadow8; }
+  -webkit-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin text-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+ $params: $shadow1;
+  @if $shadow2 
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+
+  -webkit-text-shadow: $params;
+  text-shadow: $params;
+}
+@mixin ani($time){
+  -webkit-transition: all $time ease-in-out;
+       -o-transition: all $time ease-in-out;
+          transition: all $time ease-in-out;
+}
+
+@mixin animate($numb, $numb2, $numb3, $numb4){
+ -webkit-animation-duration: $numb2;
+ -webkit-animation-delay: $numb3;
+ -webkit-animation-iteration-count: $numb4;
+ -webkit-animation-name: $numb;
+ -moz-animation-duration: $numb2;
+ -moz-animation-delay: $numb3;
+ -moz-animation-iteration-count: $numb4;
+ -moz-animation-name: $numb;
+ -o-animation-duration: $numb2;
+ -o-animation-delay: $numb3;
+ -o-animation-iteration-count: $numb4;
+ -o-animation-name: $numb;
+ animation-duration: $numb2;
+ animation-delay: $numb3;
+ animation-iteration-count: $numb4;
+ animation-name: $numb;
+}
+@mixin trans($numb){-webkit-transition:all $numb ease !important;
+       -o-transition:all $numb ease !important;
+          transition:all $numb ease !important;}
+
+
+@mixin delay($numb) {
+ -o-animation-delay: $numb !important;
+ animation-delay: $numb !important;
+
+}

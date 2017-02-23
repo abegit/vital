@@ -1,0 +1,29 @@
+.ssba {
+    font-size: 1rem;
+    font-weight: normal;
+}
+.ssba.ssba-wrap {
+	    color: #000000;
+	    display: inline-block;
+	    font-family: "Montserrat";
+	    font-size: 1rem;
+	    font-weight: normal;
+	    height: 36px;
+	    margin: 6px 0 6px 10px;
+	}
+
+.card-reveal {
+	.ssba-wrap div {
+	    color: rgba(0, 0, 0, 0);
+	    font-size: 0;
+	    line-height: 0;
+	}
+	.ssba-wrap div a img {
+	    padding: 1px;
+	}
+}
+
+#articles .card .card-content, #articles .card .card-reveal {
+    max-height: 230px;
+}
+

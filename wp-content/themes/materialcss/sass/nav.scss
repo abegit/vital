@@ -1,0 +1,213 @@
+
+nav ul a, nav .brand-logo, nav .button-collapse {
+  color: #fff;
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
+nav .brand-logo {
+    float: left;
+    height: 80px;
+    line-height: 0;
+    overflow: hidden;
+    padding: 15px 0;
+    @media #{$large-and-up} {
+      padding-right:40px;
+      position: relative;
+      width: 15%;
+    }
+}
+nav {
+    position: relative;
+    z-index: 99 !important;
+    height: 80px;
+    line-height: 80px;
+   &> div > ul > li > a i,
+   &> div > ul > li > a,
+   a.button-collapse i,
+   a.button-collapse, a.button-search i {
+	    height: 80px;
+	    line-height: 80px;
+	}
+}
+nav {
+	.dropdown-content {
+	    top: 80px !important;
+	    /*right: 0 !important;*/
+	    min-width: 190px;
+	    /*left: auto !important;*/
+      li > a {
+        font-family: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+      }
+	}
+}
+
+nav li {
+  &.btn-large {
+      margin: 0 !important;
+      padding: 0 !important;
+      @include box-shadow(none);
+  }
+  &.btn, &.btn-large{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+    height: 80px !important;
+    line-height: inherit !important;
+    a:hover {
+      background:lighten(#436cb4,10%);
+    }
+  }
+}
+nav li:last-child .btn-large {
+  margin: 0;
+}
+nav li .btn, nav li .btn-large {
+    opacity: 1;
+}
+li.waves-effect > .waves-ripple {
+    display: none !important;
+}
+
+
+#menu-right {
+    width: 15%;
+}
+#menu-right li, #menu-right li a {
+    width: 100%;
+}
+
+
+
+nav, footer {
+	.container {padding: 0 1rem; }
+}
+
+/* search containers & search form */
+nav {
+	form input {
+	    background: #3d3d3d none repeat scroll 0 0 !important;
+	    border: medium none !important;
+	    box-sizing: border-box !important;
+	    padding: 0 20px !important;
+	}
+	form input {
+	    border-radius: 5px !important;
+	}
+}
+
+
+form#searchform {
+  position: relative;
+}
+#searchClose {
+    height: 3rem;
+    line-height: 3rem;
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 999;
+    i {line-height: inherit; }
+}
+#menu-left {
+    height: 80px;
+    /*max-width: 500px;*/
+    overflow: hidden;
+    transition: all 1s ease 0s;
+}
+#menu-left{
+	max-width: 70%;
+    position: relative;
+    width: 100%;
+	li.menu-item {
+	    transition: 1s ease;
+	    opacity: 1;
+	    transform: scale(1) translateX(0) translateZ(0);
+	}
+	li.menu-item:nth-child(2) {
+	    transition: all 260ms ease-in-out 90ms !important;
+	}
+	li.menu-item:nth-child(3) {
+	    transition: all 170ms ease-in-out 180ms !important;
+	}
+	&.close {
+		li.menu-item {
+		    transform: scale(1) translateX(100px) translateY(100px);
+		    opacity: .2;
+		}
+	}
+	.right {
+	    float: right;
+	    pointer-events: none;
+	    position: absolute;
+	    right: 0;
+      padding: 0 1rem;
+	    top: 0;
+	    width: 100%;
+	}
+}   
+
+#menu-left {
+  input[type="search"] {
+      float: right;
+      margin: 18px 0 !important;
+      max-width: 210px;
+  }
+  input[type="search"]:focus {
+      max-width: 100%;
+  }
+  input[type="search"], #menu-left li.menu-item {
+      transition: all 350ms ease-in-out 0s !important;
+  }
+  input[type="search"] {
+      pointer-events: auto !important;
+  }
+  #searchClose {
+      pointer-events: auto;
+  }
+}
+
+
+/*side nav*/
+.side-nav {
+  li.btn-large {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    box-shadow: none;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+    a:hover {
+      background:lighten(#436cb4,10%);
+    }
+  }
+
+  li.right {
+      clear: both !important;
+      display: block;
+      float: none !important;
+      height: 60px;
+      width: 100%;
+  }
+  input[type="search"] {
+      background: #dddddd none repeat scroll 0 0;
+      border-radius: 10px;
+      float: none !important;
+      max-width: 100%;
+      position: relative !important;
+  }
+  .right {
+      padding: 10px;
+  }
+  form input {
+      margin: 0 !important;
+      padding: 0 10px;
+  }
+}
+.ui-autocomplete.ui-front {
+    z-index: 999999999;
+}
+@media #{$medium-and-down} {
+  
+}

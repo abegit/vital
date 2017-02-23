@@ -1,0 +1,492 @@
+/*start abedit*/
+
+/*$oorange : color("orange","base");*/
+$oorange : #f58833;
+
+@import "mixins";
+
+html {
+  margin:0 !important;
+  padding: 0 !important;
+}
+
+
+@import "nav";
+
+
+
+
+
+
+.vc_row.wpb_row.vc_row-fluid {
+    box-shadow: 15px 0 0 #d9bc86 inset, -15px 0 0 #d9bc86 inset;
+}
+.section {
+    /*padding: 0;*/
+}
+.container > .section {
+  padding: 30px 1rem;
+}
+.btn {
+    background: #436cb4;
+    &:hover {
+      background:lighten(#436cb4,10%);
+    }
+}
+
+
+
+
+/*modal overlay*/
+.lean-overlay {
+    background: #000000 none repeat scroll 0 0 !important;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.modal .modal-content {
+  padding:0;
+}
+.post-loop {
+	a{color:#000;}
+	img{max-width: 100%; height: auto !important; }
+}
+
+@media #{$large-and-up} {
+  .container {
+      max-width: 1100px;
+      width: 90%;
+  }
+  #intro .container {
+      padding: 0 1rem 0 0;
+  }
+  #intro .container .section {
+      background-image: url("../images/eliyahu_cropped.png") !important;
+      /*background-position: center center !important;*/
+      background-position: right bottom !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      /*@include bp-large{*/
+        height:570px;
+      /*}*/
+  }
+}
+@media #{$medium-only} {
+  #intro {
+      background-image: url("http://eliyahujian.com/wp-content/themes/materialcss/images/eliyahu_cropped.png") !important;
+      background-position: right bottom !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+  }
+}
+#intro {
+  .row {
+      padding: 20px 0 10px !important;
+  }
+  h1 {
+    -moz-osx-font-smoothing: grayscale;
+    color: $oorange;
+    font-family: "Satisfy";
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+  h2 {
+    box-shadow: 0 -18px 0 rgba($oorange,.4) inset;
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 3.2rem;
+    font-variant: small-caps;
+    line-height: 3rem;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    font-family: "Kreon";
+    font-size: 2.2rem;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -1px;
+  }
+  p {
+      font-size: 1.3rem;
+      font-weight: normal;
+      -moz-osx-font-smoothing: grayscale;
+      color: #8d8d8d;
+  }
+}
+
+.title_d {
+      -moz-osx-font-smoothing: grayscale;
+      clear: both;
+      display: block;
+      float: none;
+      font-family: "Satisfy";
+      font-size: 1.8rem;
+      margin: 0 auto 20px !important;
+      text-align: center;
+      width: 100%;
+      @media #{$medium-and-up} {
+        width: 350px;
+      }
+      color: $oorange;
+    span {
+        clear: both !important;
+        color: #fff;
+        display: block;
+        font-family: "Montserrat";
+        font-size: 1.9rem;
+        font-variant: small-caps;
+        line-height: 1rem;
+        margin: 0;
+        padding: 7px 0 16px;
+        z-index: 2;
+        box-shadow: 0 -20px 0 rgba($oorange,.4) inset;
+    }
+}
+.blue-text.title_d {
+  span {
+    box-shadow: 0 -20px 0 rgba(#2196f3,.4) inset;
+  }
+}
+
+
+div:not(.textwidget) > .title_d > span {
+    color: #6d6d6d;
+}
+
+
+
+
+
+#articles {
+  .card-image img {
+      opacity: 0.3;
+      transition: 350ms ease;
+  }
+  .card:hover .card-image img {
+      opacity: .8;
+  }
+  .card-content.grey.lighten-4::after {
+      bottom: 0;
+      box-shadow: 0 20px 80px 80px #dfdfdf, 0 20px 80px 80px #f5f5f5;
+      content: "";
+      display: block;
+      height: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+  }
+  .card-content.grey.lighten-4::after {
+      overflow: hidden;
+  }
+  .card.no-shadow {
+      overflow: hidden;
+  }
+
+}
+.no-shadow {
+  box-shadow: none;
+}
+
+#videos .card .card-title {
+    font-size: 1.1rem;
+    line-height: 1rem !important;
+}
+#videos .card-content {
+    padding: 10px 0;
+}
+
+
+#videos-post-loop .post:nth-child(4n+1) {
+    clear: both;
+}
+
+
+.input-field input, input[type="search"], input[type="text"] {
+  box-sizing:border-box !important;
+}
+.widget {
+ .input-field label.active {
+  letter-spacing: 2px;
+  transform: translateX(20px);
+  color: transparent !important;
+ }
+ .input-field label {
+  letter-spacing: 0;
+  transition: all 500ms ease 0s;
+ }
+  .input-field > label.active:after {
+    transform: translateX(-40px) translateY(-18px);
+    letter-spacing: 0px;
+  }
+  .input-field label, .widget .input-field input {
+      padding: 0 20px;
+      box-sizing: border-box;
+  }
+
+  form.row {
+      background: #2d2d2d none repeat scroll 0 0;
+  }
+  .row input[type="email"] {
+      background: #505050 none repeat scroll 0 0;
+  }
+  .row input[type="email"], .row label {
+      padding: 0 20px;
+  }
+  form.row input {
+      height: 53px;
+  }
+}
+
+
+
+/* card fixes */
+.card .material-icons {
+  line-height: inherit;
+}
+
+
+
+h1.title {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 30px 0 0;
+}
+
+
+/*newsletter*/
+.row.newsletter-form {
+    margin: 20px 0 0;
+}
+
+form.row {
+    padding: 20px;
+    .col {
+      padding: 0;
+    }
+    .input-field input, .col {
+        margin: 0;
+    }
+}
+
+
+
+.sidebar {
+  .widget.widget_text.panel.s12.col {
+    background: #2d2d2d none repeat scroll 0 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 20px;
+  }
+   .widget h3 {
+      width: 100%;
+  }
+   .widget.widget_text.panel.s12.col h3 span {
+      color: #ffffff !important;
+  }
+   .widget form {
+      //background: #000000 none repeat scroll 0 0 !important;
+      padding: 10px;
+  }
+   form .col,  form .col input {
+      margin: 0 !important;
+      padding: 0px !important;
+  }
+  .widget form label {
+      padding-left: 0px !important;
+  }
+  form .col input {
+      padding: 0 10px !important;
+  }
+}
+
+
+
+
+.single-post {
+  .widget {
+    margin: 0 0 40px;
+  }
+  .widget .ssba.ssba-wrap {
+    margin-left: 0;
+  }
+  .widget .card-content {
+      padding: 10px 0;
+  }
+  .widget .activator.material-icons {
+      display: none;
+  }
+  .widget .card-content .card-title {
+      display: block;
+      font-size: 1rem;
+      line-height: 1rem;
+      min-height: 40px;
+  }
+
+  .hero.wp-post-image {
+      height: auto !important;
+      width: 100%;
+  }
+  .post-content .title {
+      h1.title {
+        font-family: "Montserrat";
+        letter-spacing: -1px;
+      }
+    }
+}
+
+
+@media #{$medium-and-down} {
+  body.single-post{
+    div#content .container {
+        /*max-width: 100% !important;*/
+        /*width: 100%;*/
+    }
+    div#content .container .section {
+        padding: 0 !important;
+    }
+    div#content .container .section .row .content {
+        box-sizing: border-box;
+        padding: 30px !important;
+    }
+    .post-content {
+        background: #7d7d7d none repeat scroll 0 0;
+        color: #efefef;
+        padding: 1px;
+        position: relative;
+    }
+    .post-content > * {
+        display: block;
+        float: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90%;
+    }
+    .post-content .ssba.ssba-wrap {
+        display: block;
+        float: none !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+    
+  }
+}
+
+.woocommerce nav.woocommerce-breadcrumb {
+    background-color: #fff;
+    padding: 0 20px;
+    box-shadow: none;
+}
+
+.single-product #sidebar {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+select#billing_country,
+select#billing_state {
+    display: block;
+}
+
+.product-type-simple .summary {
+    padding: 0 20px;
+}
+
+#searchform {
+    display: none;
+}
+
+nav ul a,
+nav .brand-logo,
+nav .button-collapse {
+    opacity: 1 !important;
+
+    &:hover {
+        opacity: .7 !important;
+    }
+}
+
+.newsletter-modal {
+    background-color: #212121;
+    padding: 40px 45px !important;
+    color: #fff;
+    height: auto !important;
+
+    h3 {
+        color: #f58833;
+        font-family: "Satisfy";
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    h4 {
+        color: #fff;
+        font-family: "Kreon";
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    .input-field {
+        label, input {
+            position: relative;
+        }
+    }
+}
+
+// classes page, ebooks page
+.page-id-393, .page-id-417, .page-id-526 {
+    /*.post-content {
+        position: relative;
+    }
+
+    h1.title {
+        position: absolute;
+        color: #fff;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+        top: 135px;
+        left: 25px;
+    }*/
+
+    h1.title {
+        display: none;
+    }
+
+    img.classes {
+        max-width: 100%;
+    }
+}
+
+a.class-title {
+    line-height: initial !important;
+    display: block !important;
+    margin-top: -20px !important;
+}
+
+.widget .textwidget {
+    a.class-title {
+        margin-top: 5px !important;
+    }
+}
+
+p.class-description {
+    line-height: initial !important;
+    margin: 10px 0 !important;
+}
+
+div.class-content {
+    padding: 0 !important;
+}
+
+@import "plugins-ssba";
+@import "plugins-woocommerce";
+
+p {
+    line-height: initial;
+}
