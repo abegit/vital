@@ -5,7 +5,7 @@
       <!--   Icon Section   -->
   
 
-      <h3 class="title_d blue-text">Watch Our <span><?php if( is_home() ) {  echo get_bloginfo( 'description' ); }
+      <h3 class="blue-text">Watch Our <span><?php if( is_home() ) {  echo get_bloginfo( 'description' ); }
   elseif (is_archive()) { echo single_cat_title(); }
   elseif (is_category() ) { echo the_title(); }
   elseif (is_singular('product') || is_page_template('page-enter.php')) {}

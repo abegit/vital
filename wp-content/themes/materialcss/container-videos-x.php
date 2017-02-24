@@ -2,7 +2,7 @@
     <div class="section">
 
       <!--   Icon Section   -->
-      <h3 class="title_d blue-text">Take our <span>Classes</span></h3>
+      <h3 class="blue-text">Take our <span>Classes</span></h3>
 
       <div class="row">
         <div class="s12 l12 m6 col post">

@@ -1,9 +1,11 @@
 <?php get_header(); ?>
-
-  
-
-
-  <div style="<?php if (is_home()) {?> display: none;<?php } ?>"><div class="container">
+<?php if (is_home()) { 
+get_template_part('container','intro');
+get_template_part('container','introvideo');
+// get_template_part('container','videos');
+// get_template_part('container','articles'); 
+} ?>
+<div style="<?php if (is_home()) {?> display: none;<?php } ?>"><div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
@@ -31,21 +33,4 @@
     </div>
   </div> <!-- end container -->
   </div>
-<?php if (is_home()) { 
-get_template_part('container','intro'); 
-get_template_part('container','videos'); 
-get_template_part('container','articles'); 
-} ?>
-
-  <!-- <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div> -->
-
 <?php get_footer(); ?>

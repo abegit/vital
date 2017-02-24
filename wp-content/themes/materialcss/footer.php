@@ -1,9 +1,11 @@
-  <footer class="page-footer black">
+  <footer class="page-footer white black-text">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text"><img width="121" height="50" src="<?php echo get_stylesheet_directory_uri(); ?>/images/eliyahu-logo.svg" alt="Eliyahu Jian"></h5>
-          <p class="grey-text text-lighten-4"><?php bloginfo('description'); ?></p>
+        <div class="col l3 s12">
+          <h5 class="black-text">
+            <i class="icon-vital-transformation"></i>
+          </h5>
+          <!-- <p class="grey-text text-lighten-4"><?php bloginfo('description'); ?></p> -->
                   <!-- Modal Trigger -->
           <!-- Modal Structure -->
           <div id="modal1" class="modal modal-fixed-footer">
@@ -18,7 +20,7 @@
 
 
         </div>
-        <div class="col l3 s12">
+        <div class="col l6 s12">
           <!--
           <h5 class="white-text">Latest Videos</h5>
           <ul>
@@ -38,9 +40,13 @@
           </ul>
           -->
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Follow us on Facebook</h5>
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEliyahuJian%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <div class="col l3 s12 center">
+          <span class="script">Like what you see</span><br>
+            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-twitter grey-text text-darken-4"></i></a>
+            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-facebook grey-text text-darken-4"></i></a>
+            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-linkedin grey-text text-darken-4"></i></a>
+
+          <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEliyahuJian%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
           <!-- <ul>
             <?php $fPost = new WP_Query();
             $fPostSettings = array(
@@ -54,27 +60,21 @@
              <li><a class="white-text" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
              <?php endwhile; ?>
             <?php endif; ?>
-            <!-- <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li> -->
           </ul> -->
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
+    <!-- <div class="footer-copyright">
       <div class="container grey-text text-darken-2">
         <a class="grey-text text-lighten-1" href="/">Home</a> - 
-        <!--<a class="grey-text text-lighten-1" href="/category/videos">Videos</a> - -->
         <a class="grey-text text-lighten-1" href="/contact">Contact</a> - 
         <a class="grey-text text-lighten-1" href="/privacy-policy">Privacy Policy</a> - 
         <a class="grey-text text-lighten-1" href="/terms-of-service">Terms of Service</a> - 
         <a class="grey-text text-lighten-1" href="/product/weekly-affirmations">Weekly Affirmations</a> - 
         <a class="grey-text text-lighten-1" href="/downloads/daily-affirmations">E-Book</a>
-        <span class="grey-text text-lighten-1 right">&copy; 2017 by Eliyahu Jian</span>
-        <!-- <button class="modal-trigger waves-effect waves-light btn right grey darken-4" data-target="modal1">Contribute</button> -->
+        <span class="grey-text text-lighten-1 right">&copy; 2017 by Vital Transformation</span>
       </div>
-    </div>
+    </div> -->
   </footer>
 
 
@@ -150,6 +150,7 @@ $d('#searchClose').on("click", function(){
 
 
     $d(window).load(function() {
+      $d('body').addClass('init');
       // $d('.modal').modal();
 
       // var yt_int, yt_players={},

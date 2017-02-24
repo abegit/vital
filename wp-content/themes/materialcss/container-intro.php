@@ -1,22 +1,37 @@
-  <div id="intro" style="background:#061625;" class="white-text"><div class="container">
+<div id="intro" class="black-text parallax-container">
+  <div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
-            <div class="s12 m6 col">
-                 <h1 style="margin: 50px 0 0 0;">Hi, I’m Eliyahu Jian</h1>
-<h2>Spiritual Advisor and Mystical Kabbalist</h2>
-<h3>Consultant, Coach and Teacher</h3>
-<p><!--My vision is to give people a chance to be the best that they can become in their life. I want to reach people through an intellectual, mystic  and psychic level.  I want to help people discover who they are.  -->I am not here to tell you what’s right or wrong, I’m here to help you reach your potential.</p>
-<a href="/e-books/" class="btn waves-effect waves-light">View My E-Books</a>
-
+            <div class="s12 col center">
+<h1>Reach Your Potential</h1>
+<span class="script">Eliyahu Jian</span>
             </div>
       </div> <!-- end row post-loop -->
 
     </div> <!-- end section -->
-  </div> <!-- end container -->
+  </div>
+
+
+<div class="center grey section">
+  <div class="container row">
+  <div class="col s12 m4 push-m2">
+  <p class="script">Download My</p>
+  <a href="/e-books/" class="btn waves-effect waves-light grey-text text-darken-4">E-Book</a>
+
+</div>
+    <div class="col s12 m4 push-m2">
+  <p class="script">Like what you see</p>
+  <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-twitter grey-text text-darken-4"></i></a>
+  <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-facebook grey-text text-darken-4"></i></a>
+  <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-linkedin grey-text text-darken-4"></i></a>
 </div>
 
+</div>
+  </div> <!-- end container -->
+  <div class="parallax"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vital-transformations-mt-fuji.jpg" alt="Vital Transformation"></div>
+</div>
 <div style="border-top: 4px solid rgb(237, 121, 37); padding: 50px 0px;" class="grey darken-4 grey-text text-lighten-1"><div class="container">
     <div class="section">
 

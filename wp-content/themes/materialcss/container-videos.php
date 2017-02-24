@@ -2,7 +2,7 @@
     <div class="section">
 
       <!--   Icon Section   -->
-      <h3 class="title_d blue-text">Watch Our <span>Videos</span></h3>
+      <h3 class="blue-text">Watch Our <span>Videos</span></h3>
       <div class="row" id="videos-post-loop" class="post-loop">
             <?php $cVideos = new WP_Query();
             $cVideoSettings = array(

@@ -44,7 +44,7 @@ get_template_part('container','intro');
   <div class="section">
     <div class="row">
       <div class="s12 col">
-        <h3 class="title_d red-text">Check Back Later <span style="color: #6d6d6d">More Coming Soon</span></h3>
+        <h3 class="red-text">Check Back Later <span style="color: #6d6d6d">More Coming Soon</span></h3>
         <div class="center">
           <p>This website is meant to bring you spiritual knowledge in a way that directly applies to your life.  The guidance offered serves as a road map to keep you motivated, inspired and happy.  This content combines deep knowledge with life wisdom and common sense for business and everyday living.  Learning how to harness spiritual knowledge and inspiration will strengthen your relationships, encourage a healthier lifestyle and ultimately connect you to a higher power and purpose.</p>
         </div>

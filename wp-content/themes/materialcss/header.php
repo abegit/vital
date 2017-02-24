@@ -25,14 +25,15 @@
  
  <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.png" type="image/x-icon"> 
   <!-- CSS  -->
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/materialize.css?v=2.24" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=2.24" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/vital.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/social.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Courgette|Satisfy|Sriracha" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Satisfy|Montserrat:400,700|Kreon:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Caveat|Satisfy|Montserrat:400,700|Kreon:400,700" rel="stylesheet">
   <?php wp_head(); ?>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@eliyahujian">
-<meta name="twitter:title" content="Eliyahu Jian.com">
+<meta name="twitter:title" content="VitalTransformation.com">
 <meta name='twitter:description' content='<?php echo $text; ?>'>
 <meta name="twitter:image" content="<?php echo $twi_image; ?>">
 </head>
@@ -53,9 +54,12 @@
           //Process nav menu using our custom nav walker
           'walker' => new wp_materialcss_navwalker())
         ); ?>
-  <nav class="black" role="navigation">
+  <div class="navbar-fixed">
+    <nav class="transparent affix-top" role="navigation" data-spy="affix" data-offset-top="700">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eliyahu-logo.svg"></a>
+      <a id="logo-container" href="/" class="brand-logo">
+        <i class="icon-vital-transformation"></i>
+      </a>
       <!-- <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul> -->
@@ -88,3 +92,4 @@
       <a href="#" data-activates="menu-mobile-search" class="button-collapse right"><i class="material-icons">search</i></a>
     </div>
   </nav>
+  </div>

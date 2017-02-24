@@ -1,6 +1,14 @@
+/*
+-nav
+-brand-logo
+*/
 
+
+nav {
+  background:transparent;
+}
 nav ul a, nav .brand-logo, nav .button-collapse {
-  color: #fff;
+  color: #000;
   opacity: .7;
   &:hover {
     opacity: 1;
@@ -11,11 +19,11 @@ nav .brand-logo {
     height: 80px;
     line-height: 0;
     overflow: hidden;
-    padding: 15px 0;
+    padding: 10px 0;
     @media #{$large-and-up} {
-      padding-right:40px;
-      position: relative;
-      width: 15%;
+        padding-right: 40px;
+        position: relative;
+        width: 190px;
     }
 }
 nav {
@@ -72,10 +80,10 @@ li.waves-effect > .waves-ripple {
 
 
 #menu-right {
-    width: 15%;
+    /*width: 15%;*/
 }
 #menu-right li, #menu-right li a {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 
@@ -119,7 +127,7 @@ form#searchform {
 #menu-left{
 	max-width: 70%;
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
 	li.menu-item {
 	    transition: 1s ease;
 	    opacity: 1;
@@ -211,3 +219,30 @@ form#searchform {
 @media #{$medium-and-down} {
   
 }
+
+
+
+/*2/23/17*/
+.navbar-fixed {
+    height: 0;
+}
+
+.navbar-fixed nav.affix {
+    background: #fff !important;
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+nav.transparent.affix-top {
+    box-shadow: none;
+    transition:1s ease;
+}
+
+nav.transparent.affix a {
+    color:#000;
+}
+
+i.icon-vital-transformation {
+    font-size: 3rem;
+}
+
+
