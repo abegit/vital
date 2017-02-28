@@ -2,6 +2,8 @@
 <?php if (is_home()) { 
 get_template_part('container','intro');
 get_template_part('container','introvideo');
+get_template_part('container','newsletter');
+get_template_part('container','classes');
 // get_template_part('container','videos');
 // get_template_part('container','articles'); 
 } ?>

@@ -9,7 +9,6 @@ var request;
                 $form = $d(this),
                 $inputs = $form.find("input, select, button, textarea"),
                 serializedData = $form.serialize();
-
             request = $d.ajax({
                 url: js_config.ajax_url,
                 type: 'post',
@@ -17,6 +16,7 @@ var request;
                     action: 'ajax_subscribe',
                     nonce: js_config.ajax_nonce,
                     ne: $form.find('.newsletter-email').val(), //THIS IS IMPORTANT TO SUBMIT!! ITS REQUIRED BY THE subscribe() METHOD
+                    nl: $form.find('.newsletter-list').val(), //THIS IS IMPORTANT TO SUBMIT!! ITS REQUIRED BY THE subscribe() METHOD
                     data: serializedData
                 },
                 beforeSend: function () {
@@ -41,6 +41,3 @@ var request;
             event.preventDefault();
         });
 }); // end of document ready
-
-
- 

@@ -102,8 +102,8 @@ add_filter('content', 'do_shortcode');
 
 
 add_filter( "wp_nav_menu_items", function ($items, $args){
-		if ($args->theme_location == 'left') {
-			$items .= bpCustom_Header();
+		if ($args->theme_location == 'right') {
+			// $items .= bpCustom_Header();
 			return $items; 
 		} elseif ($args->theme_location == 'mobile-search') {
 			$keepitems = $items;

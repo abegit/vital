@@ -28,6 +28,7 @@
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/vital.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/social.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="<?php echo get_stylesheet_directory_uri(); ?>/fonts/danielbd.css?v=2.24.<?php echo rand(0,99); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Courgette|Satisfy|Sriracha" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Caveat|Satisfy|Montserrat:400,700|Kreon:400,700" rel="stylesheet">
   <?php wp_head(); ?>

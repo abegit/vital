@@ -6,6 +6,8 @@
 
 nav {
   background:transparent;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 nav ul a, nav .brand-logo, nav .button-collapse {
   color: #000;

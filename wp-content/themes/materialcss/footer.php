@@ -6,77 +6,40 @@
             <i class="icon-vital-transformation"></i>
           </h5>
           <!-- <p class="grey-text text-lighten-4"><?php bloginfo('description'); ?></p> -->
-                  <!-- Modal Trigger -->
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-            </div>
-          </div>
-
-
         </div>
         <div class="col l6 s12">
-          <!--
-          <h5 class="white-text">Latest Videos</h5>
-          <ul>
-            <?php $fVPost = new WP_Query();
-             $fVPostSettings = array(
-                'category_name' => 'videos',
-                'posts_per_page' => 4,
-                'showposts' => 4,
-                'orderby'=> 'date',
-                'paged' => get_query_var('page')
-            );
-                    $fVPost->query($fVPostSettings); ?>                  
-            <?php if ($fVPost->have_posts()) : while($fVPost->have_posts()) : $fVPost->the_post(); ?>
-             <li><a class="white-text" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-             <?php endwhile; ?>
-            <?php endif; ?>
-          </ul>
-          -->
+          <nav class="no-shadow">
+            <ul>
+              <li>
+                <a href="#">Classes</a>
+              </li>
+              <li>
+                <a href="#">Videos</a>
+              </li>
+              <li>
+                <a href="#">Events</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Donate</a>
+              </li>
+            </ul>
+          </nav>        
         </div>
         <div class="col l3 s12 center">
           <span class="script">Like what you see</span><br>
-            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-twitter grey-text text-darken-4"></i></a>
-            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-facebook grey-text text-darken-4"></i></a>
-            <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-linkedin grey-text text-darken-4"></i></a>
-
-          <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEliyahuJian%2F&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
-          <!-- <ul>
-            <?php $fPost = new WP_Query();
-            $fPostSettings = array(
-                'category__not_in' => array( 5 ),
-                'posts_per_page' => 4,
-                'showposts' => 4,
-                'paged' => get_query_var('page')
-            );
-                    $fPost->query($fPostSettings); ?>                  
-            <?php if ($fPost->have_posts()) : while($fPost->have_posts()) : $fPost->the_post(); ?>
-             <li><a class="white-text" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-             <?php endwhile; ?>
-            <?php endif; ?>
-          </ul> -->
+            <!-- <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-twitter grey-text text-darken-4"></i></a> -->
+            <a href="https://www.facebook.com/VitalTransformation52/" target="_blank" class="btn waves-effect waves-light btn-floating"><i class="sc-facebook grey-text text-darken-4"></i></a>
+            <!-- <a href="/e-books/" class="btn waves-effect waves-light btn-floating"><i class="sc-linkedin grey-text text-darken-4"></i></a> -->
         </div>
       </div>
     </div>
-    <!-- <div class="footer-copyright">
-      <div class="container grey-text text-darken-2">
-        <a class="grey-text text-lighten-1" href="/">Home</a> - 
-        <a class="grey-text text-lighten-1" href="/contact">Contact</a> - 
-        <a class="grey-text text-lighten-1" href="/privacy-policy">Privacy Policy</a> - 
-        <a class="grey-text text-lighten-1" href="/terms-of-service">Terms of Service</a> - 
-        <a class="grey-text text-lighten-1" href="/product/weekly-affirmations">Weekly Affirmations</a> - 
-        <a class="grey-text text-lighten-1" href="/downloads/daily-affirmations">E-Book</a>
-        <span class="grey-text text-lighten-1 right">&copy; 2017 by Vital Transformation</span>
-      </div>
-    </div> -->
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -238,7 +201,7 @@ $d('#searchClose').on("click", function(){
 
 <div id="popup-newsletter-modal" class="modal modal-fixed-footer newsletter-modal">
     <h3>Join Our Community</h3>
-    <h4>Sign up to receive updates about Eliyahu's future classes, events, energy trips and more!</h4>
+    <h4>Sign up to receive updates from Vital Transformation's future classes, events, energy trips and more!</h4>
 
     <!-- <form class="newsletter-form" action="/?na=s" method="post" class="row newsletter-form">
         <div class="input-field">
@@ -262,8 +225,59 @@ $d('#searchClose').on("click", function(){
     <button id="popup-newsletter-confirmation-close" type="button" class="btn-large waves-effect waves-light waves-input-wrapper">Close</button>
 </div>
 
-<script src="/wp-content/themes/materialcss/js/newsletter.js"></script>
-
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/newsletter.js"></script>
 <?php wp_footer(); ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/isotope.js"></script>
+<script>
+  var $hashFix = jQuery.noConflict();
+(function ($hashFix) {
+  // $hashFix('.products .product').addClass('item');
+  var $container = $hashFix('.row.classes');
+  var colWidth = function () {
+    var w = $container.width(), 
+    columnNum = 1,
+    columnWidth = 0;
+    if (w > 900) {
+          columnNum  = 3;
+    }
+    else if (w > 600) {
+          columnNum  = 2;
+    }
+    else if (w > 300) {
+          columnNum  = 1;
+    }
+    columnWidth = Math.floor(w/columnNum);
+    $container.find('.single-class').each(function() {
+      var $item = $hashFix(this),
+      multiplier_w = $item.attr('class').match(/single-class-w(\d)/),
+      multiplier_h = $item.attr('class').match(/single-class-h(\d)/),
+      width = multiplier_w ? columnWidth*multiplier_w[1]-10 : columnWidth-10,
+      height = multiplier_h ? columnWidth*multiplier_h[1]*0.5-40 : columnWidth*0.5-40;
+      $item.css({
+        width: width,
+          //height: height
+        });
+    });
+    return columnWidth;
+  },
+  isotope = function () {
+    $container.imagesLoaded( function(){
+      $container.isotope({
+        resizable: false,
+        itemSelector: '.single-class',
+        masonry: {
+          columnWidth: colWidth(),
+          gutterWidth: 20
+        }
+      });
+      });
+  };
+
+  isotope();
+  // console.log('tagged here');
+
+  $hashFix(window).smartresize(isotope);
+}(jQuery));
+</script>
   </body>
 </html>
