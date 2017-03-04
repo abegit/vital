@@ -51,7 +51,7 @@
         <?php endif; ?>
         <?php 
         if (!in_category('5')) :
-           get_template_part('widget','videos');
+           //  get_template_part('widget','videos');
          endif; ?>     
 
       </div> <!-- end sidebar -->
@@ -59,7 +59,7 @@
       <?php wp_reset_query();
       if (in_category('5')) :
         echo "<div class='col'>";
-         get_template_part('widget','videos');
+         // get_template_part('widget','videos');
         echo "</div>";
          endif; ?>
       </div>

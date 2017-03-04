@@ -158,6 +158,12 @@ function jnz_tnp_ajax_subscribe() {
                  )
              );
 
+             // if ('1' == $fields["nl[]"]) {
+             	// wp_mail( $fields['ne'], 'Welcome to the Weekly Affirmations', 'Here is the info you need to complete' . json_encode($fields));
+             	// wp_mail( $fields['ne'], '[Vital Transformation]-Weekly Affirmations', '<p>Here is the info you need to complete</p>', 'Content-type: text/html');
+             // } else {
+             	// wp_mail( $fields['ne'], '[Vital Transformation]-Workshops', '<p>Here is the info you need to complete</p>', 'Content-type: text/html');
+             // }
              if ( ! $exists ) {
                  NewsletterSubscription::instance()->subscribe();
                  $output = array(

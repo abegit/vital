@@ -46,7 +46,7 @@ get_header(); ?>
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Article Sidebar') ) : ?>
         <?php endif; ?>
       <?php if (!in_category('5')) {
-           get_template_part('widget','videos');
+           // get_template_part('widget','videos');
          } ?>     
 
       </div>

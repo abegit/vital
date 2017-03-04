@@ -39,26 +39,17 @@
 <meta name="twitter:image" content="<?php echo $twi_image; ?>">
 </head>
 <body <?php body_class(); ?>>
-          <?php /* Primary navigation */
-        wp_nav_menu( array(
-          'theme_location' => 'mobile',
-          'container' => false,
-          'menu_class' => 'side-nav',
-          //Process nav menu using our custom nav walker
-          'walker' => new wp_materialcss_navwalker())
-        ); ?>
-        <?php /* Primary navigation */
-        wp_nav_menu( array(
-          'theme_location' => 'mobile-search',
-          'container' => false,
-          'menu_class' => 'side-nav',
-          //Process nav menu using our custom nav walker
-          'walker' => new wp_materialcss_navwalker())
-        ); ?>
+<script>
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (!iOS) {
+    document.getElementsByTagName("body")[0].classList.add("notios");
+  }
+  document.getElementsByTagName("body")[0].classList.add("js");
+</script>
   <div class="navbar-fixed">
     <nav class="transparent affix-top" role="navigation" data-spy="affix" data-offset-top="700">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo">
+      <a id="logo-container" href="<?php echo home_url(); ?>" class="brand-logo">
         <i class="icon-vital-transformation"></i>
       </a>
       <!-- <ul class="right hide-on-med-and-down">
@@ -90,7 +81,7 @@
       </ul> -->
       <a href="#" data-activates="menu-mobile" class="button-collapse left"><i class="material-icons">menu</i></a>
       <!-- <a href="#" data-activates="menu-search" class="button-collapse right"><i class="material-icons">search</i></a> -->
-      <a href="#" data-activates="menu-mobile-search" class="button-collapse right"><i class="material-icons">search</i></a>
+      <!-- <a href="#" data-activates="menu-mobile-search" class="button-collapse right"><i class="material-icons">search</i></a> -->
     </div>
   </nav>
   </div>

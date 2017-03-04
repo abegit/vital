@@ -65,8 +65,11 @@ nav li {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
     height: 80px !important;
     line-height: inherit !important;
+    &:hover {
+      @include box-shadow(none);
+    }
     a:hover {
-      background:lighten(#436cb4,10%);
+      background:lighten($oorange,10%);
     }
   }
 }
@@ -248,3 +251,18 @@ i.icon-vital-transformation {
 }
 
 
+@media #{$medium-and-down} {
+  nav, nav > div > ul > li > a i,
+   nav > div > ul > li > a,
+   nav a.button-collapse i,
+   nav a.button-collapse, a.button-search i {
+    line-height: 60px;
+    height: 60px;
+  }
+  nav .brand-logo, nav .brand-logo i {
+    height: 60px;
+    line-height: 60px;
+    padding: 0;
+    margin: 0;
+  }
+}

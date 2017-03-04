@@ -1,0 +1,43 @@
+body.js {
+	#intro{
+		h1 {
+			transition:opacity 0s ease 0s, letter-spacing 0s ease 0s;
+			letter-spacing:7px;
+			opacity: 0;
+		}
+		span {
+			transition:opacity 0s ease 0s, transform 0s ease 0s;
+			transform: translateX(-40px);
+			opacity: 0;
+			display: inline-block;
+		}
+		.grey.section {
+		    transform: translateY(-40%);
+		    opacity: 0;
+		    transition: 0s ease 0s;
+		}
+	}
+	&.init {
+		#intro{
+			h1 {
+				-webkit-transition:opacity 3s ease 1.5s, letter-spacing 3s ease 1.5s;
+				transition:opacity 3s ease 1.5s, letter-spacing 3s ease 1.5s;
+				letter-spacing:10px;
+			}
+			span {
+				-webkit-transition:opacity 2s ease 3s, transform 2s ease 3s;
+				transition:opacity 2s ease 3s, transform 2s ease 3s;
+				-webkit-transform: translateX(0px);
+				transform: translateX(0px);
+			}
+			h1, span {
+				opacity: 1;
+			}
+			.grey.section {
+			    transform: translateY(0%);
+			    opacity: 1;
+			    transition: 3s ease 4s;
+			}
+		}
+	}
+}
