@@ -16,7 +16,6 @@ get_header(); ?>
 <div style="<?php if (is_home()) {?> display: none;<?php } ?>"><div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
       <div class="row">
         <div class="s12 m12 l8 col content">
         

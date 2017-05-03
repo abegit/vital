@@ -58,8 +58,6 @@ $content_width = (is_page('about') == true ? 's12 m8 l9' : 's12'); // returns tr
 
   <div <?php if (is_home()) {?>style="display: none;" <?php } ?><?php if (is_page('about')) { ?>class="parallax-container"<?php } ?>><div class="container black-text">
     <div class="section">
-
-      <!--   Icon Section   -->
       <div class="row">
 
         

@@ -1,7 +1,7 @@
   <div style="padding:40px 1px;" id="articles"><div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      
       <h3 class="red-text">Read Our <span>Articles</span></h3>
       <div class="row" id="articles-post-loop" class="post-loop">
             <?php $cPost = new WP_Query();

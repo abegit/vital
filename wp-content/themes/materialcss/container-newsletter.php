@@ -1,7 +1,7 @@
 <div id="newsletter" class="black-text parallax-container">
   <div class="container">
     <div class="section" style="padding-bottom: 50px;">
-      <!--   Icon Section   -->
+      
       <div class="row">
             <div class="s12 col center">
               <h1 class="white-text">Start Your Journey</h1>

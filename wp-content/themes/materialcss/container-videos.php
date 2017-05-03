@@ -1,7 +1,7 @@
   <div style="padding:40px 1px;" id="videos"><div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      
       <h3 class="blue-text">Watch Our <span>Videos</span></h3>
       <div class="row" id="videos-post-loop" class="post-loop">
             <?php $cVideos = new WP_Query();
@@ -16,7 +16,6 @@
             <?php if ($cVideos->have_posts()) : while($cVideos->have_posts()) : $cVideos->the_post(); ?>
             <div class="s12 l3 m6 col post">
                  <?php $video = get_post_meta($post->ID, 'post_video', true ); ?>
-
                  <div class="card no-shadow">
                     <a class="card-image waves-effect waves-block waves-light<?php if($video != '') { $query_split = explode("//", $video); $query_splited = explode("/", $query_split[1]); $id = explode( 'watch?v=', $query_splited[1] );?> modal-trigger" data-id="<?php echo $id[1]; ?>" href="#modal<?php echo $post->ID; } ?>">
                       <!-- <a class="" href="> -->

@@ -1,8 +1,6 @@
 <div id="intro" class="black-text parallax-container">
   <div class="container">
     <div class="section">
-
-      <!--   Icon Section   -->
       <div class="row">
             <div class="s12 col center">
               <h1>Reach Your Potential</h1>
@@ -43,8 +41,6 @@
 </div>
 <div style="border-top: 4px solid rgb(237, 121, 37); padding: 50px 0px;" class="grey darken-4 grey-text text-lighten-1 hide"><div class="container">
     <div class="section">
-
-      <!--   Icon Section   -->
       <div class="row">
             <div class="s12 col">
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Sidebar') ) : ?>

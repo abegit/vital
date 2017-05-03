@@ -2,7 +2,6 @@
   <div id="content"><div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
       <div class="row">
       <div class="s12 m12 l8 col content">
       <?php if (have_posts()) :?><?php while(have_posts()) : the_post(); ?>

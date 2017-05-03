@@ -2,7 +2,7 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      
       <div class="row">
             <div class="s12 col center">
               <h1 class="white-text">Explore Our Classes</h1>

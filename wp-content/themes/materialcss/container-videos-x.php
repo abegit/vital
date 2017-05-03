@@ -1,7 +1,7 @@
   <div style="padding:40px 1px;" id="videos"><div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      
       <h3 class="blue-text">Take our <span>Classes</span></h3>
 
       <div class="row">
