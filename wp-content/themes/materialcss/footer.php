@@ -130,11 +130,26 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/materialize.js"></script>
-   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>-->
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/moment.js"></script>
   <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/init.js"></script>-->
   <script>
   var $d = jQuery.noConflict();
 
+    if ($d('body').is('.single-product.postid-96')) {
+        const dayINeed = 2; // for Thursday
+      // if we haven't yet passed the day of the week that I need:
+      if (moment().isoWeekday() <= dayINeed) { 
+        // then just give me this week's instance of that day
+        console.log(moment().isoWeekday(dayINeed));
+        console.log(moment().isoWeekday(dayINeed + 7));
+        console.log(moment().isoWeekday(dayINeed + 7 + 7));
+        console.log(moment().isoWeekday(dayINeed + 7 + 7 + 7));
+      } else {
+        // otherwise, give me next week's instance of that day
+        console.log(moment().add(1, 'weeks').isoWeekday(dayINeed));
+      }
+    }
+  </script>
   <?php if (isset($_GET["nk"])) { ?>
     $d('#popup-newsletter-confirmation').modal({
                   dismissible: true, // Modal can be dismissed by clicking outside of the modal
